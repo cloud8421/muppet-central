@@ -14,12 +14,12 @@ end
 
 package :monit_config do
 
-  transfer "#{File.dirname(__FILE__)}/../conf/monit", '/etc/default/monit' do
+  transfer "#{File.dirname(__FILE__)}/../conf/monit/monit", '/etc/default/monit' do
     pre  :install, 'chmod 0777 /etc/default/monit'
     post :install, 'chmod 0755 /etc/default/monit'
   end
 
-  transfer "#{File.dirname(__FILE__)}/../conf/monitrc", '/etc/monit/monitrc' do
+  transfer "#{File.dirname(__FILE__)}/../conf/monit/monitrc", '/etc/monit/monitrc' do
     pre  :install, 'chmod 0777 /etc/monit/monitrc'
     post :install, 'chmod 0700 /etc/monit/monitrc'
     post :install, '/etc/init.d/monit start'
