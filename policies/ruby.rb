@@ -1,6 +1,7 @@
 require File.expand_path('./../../recipe_helper', __FILE__)
 
 policy :ruby, :roles => :server do
+  requires :ruby_dependencies
   requires :ruby
   requires :bundler
   requires :rake

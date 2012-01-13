@@ -2,6 +2,7 @@ require File.expand_path('./../../recipe_helper', __FILE__)
 
 policy :monit, :roles => :server do
   requires :ruby
+  requires :monit
   requires :monit_config
 end
 
