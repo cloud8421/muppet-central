@@ -1,4 +1,4 @@
-package :build_essentials do
+package :build_essential do
 
   description 'Libraries needed to compile sources'
 
