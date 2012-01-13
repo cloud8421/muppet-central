@@ -1,4 +1,4 @@
-require './recipe_helper'
+require File.expand_path('./../../recipe_helper', __FILE__)
 
 policy :ruby, :roles => :server do
   requires :ruby
